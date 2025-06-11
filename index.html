@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>イントロクイズ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <p>音源のURLを入力: 
+    <input type="text" id="audioUrlInput" placeholder="https://yourname.github.io/project/song.mp3" />
+    <button id="setUrlBtn">曲をセット</button>
+  </p>
+
+  <h1>イントロクイズ</h1>
+  <p>ニックネーム: <input type="text" id="nickname" /></p>
+  <audio id="introAudio" controls></audio>
+  <button id="startBtn">再生</button>
+  <button id="answerBtn">回答！</button>
+  <p id="result"></p>
+
+  <!-- ✅ Firebaseライブラリ -->
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
+  <!-- ✅ Firebase初期化 -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAWpoj2P5Tuf5dRsupUA5WPktQuqwwwBfg",
+      authDomain: "intro-89b16.firebaseapp.com",
+      databaseURL: "https://intro-89b16-default-rtdb.firebaseio.com",
+      projectId: "intro-89b16",
+      storageBucket: "intro-89b16.appspot.com",
+      messagingSenderId: "666788521428",
+      appId: "1:666788521428:web:978e72d70f7381af766241"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- ✅ 最後にscript.jsを読み込む -->
+  <script src="script.js"></script>
+</body>
+</html>
